@@ -20,9 +20,9 @@ sheets = exportWorkbook.sheetnames
 exportSheet = exportWorkbook[sheets[0]]
 
 # Output text files
-unfStudFilename = ("Unmatched_Students") + '.txt'
+unfStudFilename = ("unmatched_Students") + '.txt'
 unfStudentsText = open(unfStudFilename, 'wb')
-doubleEntriesFile = ("doubleEntries") + '.txt'
+doubleEntriesFile = ("double_Entries") + '.txt'
 dblEntrText = open(doubleEntriesFile, 'wb')
 
 
