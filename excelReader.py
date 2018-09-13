@@ -4,9 +4,9 @@ import openpyxl
 
 #VARIABLES THAT NEED TO BE CHANGED
 #==============================================================================
-importFile = ("import_file.xlsx")
+importFile = ('import.xlsx')
 inputGradeColumn = 3
-exportWorkbook = openpyxl.load_workbook('export_file.xlsx')
+exportFile = ('export.xlsx')
 outputGradeColumn = 7
 #==============================================================================
 
@@ -16,6 +16,7 @@ importWorkbook = xlrd.open_workbook(importFile)
 importSheet = importWorkbook.sheet_by_index(0)
 
 # Export information
+exportWorkbook = openpyxl.load_workbook(exportFile)
 sheets = exportWorkbook.sheetnames
 exportSheet = exportWorkbook[sheets[0]]
 
@@ -57,4 +58,4 @@ for i in range(importSheet.nrows):
 # Closes and saves opened files
 unfStudentsText.close()
 dblEntrText.close()
-exportWorkbook.save('export_file.xlsx')
+exportWorkbook.save(exportFile)
